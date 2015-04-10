@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         id="application"
+         point="org.eclipse.core.runtime.applications">
+      <application>
+         <run
+               class="com.shashwat.rcp.jobs.sample.Application">
+         </run>
+      </application>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            name="RCP Perspective"
+            class="com.shashwat.rcp.jobs.sample.Perspective"
+            id="com.shashwat.rcp.jobs.sample.perspective">
+      </perspective>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            category="org.eclipse.ui"
+            class="org.eclipse.ui.ExtensionFactory:progressView"
+            icon="icons/pview.gif"
+            id="org.eclipse.ui.views.ProgressView"
+            name="Progress View"
+            restorable="true">
+      </view>
+   </extension>
+
+</plugin>
