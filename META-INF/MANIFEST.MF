@@ -6,6 +6,8 @@ Bundle-Version: 1.0.0.qualifier
 Bundle-Activator: com.shashwat.rcp.jobs.sample.Activator
 Bundle-Vendor: SHASHWAT
 Require-Bundle: org.eclipse.ui,
- org.eclipse.core.runtime
+ org.eclipse.core.runtime,
+ org.eclipse.ui.navigator;bundle-version="3.5.401",
+ org.eclipse.ui.navigator.resources;bundle-version="3.4.700"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-ActivationPolicy: lazy
