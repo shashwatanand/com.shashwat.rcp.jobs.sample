@@ -29,6 +29,40 @@
             name="Progress View"
             restorable="true">
       </view>
+      <view
+            class="com.shashwat.rcp.jobs.sample.com.shashwat.rcp.jobs.sample.navigator.FileView"
+            id="com.shashwat.rcp.jobs.sample.fileview"
+            name="File Navigator View"
+            restorable="true">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.navigator.navigatorContent">
+      <navigatorContent
+            contentProvider="com.shashwat.rcp.jobs.sample.com.shashwat.rcp.jobs.sample.navigator.ContentProvider"
+            id="com.shashwat.rcp.jobs.sample.fileview.navigatorContent"
+            labelProvider="com.shashwat.rcp.jobs.sample.com.shashwat.rcp.jobs.sample.navigator.LabelProvider"
+            name="navigatorContent">
+         <triggerPoints>
+            <instanceof
+                  value="com.shashwat.rcp.jobs.sample.com.shashwat.rcp.jobs.sample.navigator.model.NavigatorRoot">
+            </instanceof>
+         </triggerPoints>
+      </navigatorContent>
+   </extension>
+   <extension
+         point="org.eclipse.ui.navigator.viewer">
+      <viewer
+            viewerId=" com.shashwat.rcp.jobs.sample.fileview">
+      </viewer>
+      <viewerContentBinding
+            viewerId=" com.shashwat.rcp.jobs.sample.fileview">
+         <includes>
+            <contentExtension
+                  pattern="com.shashwat.rcp.jobs.sample.fileview.navigatorContent">
+            </contentExtension>
+         </includes>
+      </viewerContentBinding>
    </extension>
 
 </plugin>
