@@ -21,7 +21,7 @@ public class ApplicationWorkbenchWindowAdvisor extends WorkbenchWindowAdvisor {
         configurer.setInitialSize(new Point(800, 600));
         configurer.setShowCoolBar(false);
         configurer.setShowStatusLine(false);
-        configurer.setTitle("Hello RCP"); //$NON-NLS-1$
+        configurer.setTitle("File Navigartor and Jobs"); //$NON-NLS-1$
     }
     
     @Override
